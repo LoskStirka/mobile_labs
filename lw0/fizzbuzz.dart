@@ -3,19 +3,18 @@ void main() {
 }
 
 void fizzbuzz(int n) {
-  for (int i = 1; i < n; i++) {
-    print(i);
-    if (i % 3 == 0) {
-      print("fizz");
-      i++;
+  for (int i = 1; i <= n; i++) {
+    if (i % 3 != 0 && i % 5 != 0) {
+      print(i);
     }
-    if (i % 5 == 0) {
+    if (i % 3 == 0 && i % 5 != 0) {
+      print("fizz");
+    }
+    if (i % 5 == 0 && i % 3 != 0) {
       print("buzz");
-      i++;
     }
     if (i % 3 == 0 && i % 5 == 0) {
       print("fizzbuzz");
-      i++;
     }
   }
 }
